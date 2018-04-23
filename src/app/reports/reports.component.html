@@ -1,0 +1,48 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div *ngIf="reports.length === 0" class="alert alert-info">
+                    <span>Aucun reports pour le moment</span>
+                </div>
+
+                <div *ngIf="reports.length > 0" class="card hidden-xs">
+                    <div class="header text-center">
+                        <h4 class="title">Liste de mes rapports</h4>
+                    </div>
+                    <div class="content table-responsive table-full-width">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>Prénom</th>
+                                <th>Contenu</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let patient of patients">
+                                <td> {{patient.firstname}}</td>
+                                <td> {{patient.lastname}}</td>
+                                <td *ngFor="let report of reports">
+                                    {{ report.content }}
+                                </td>
+                            </tr>
+                            </tbody>
+
+                        </table>
+                    </div>
+                </div>
+
+                <div *ngIf="reports.length > 0" class="hidden-sm hidden-md hidden-lg">
+                    <ul class="list-group" *ngFor="let report of reports">
+                        <li class="list-group-item">
+                            <h6>{{ report.firstname }} {{ report.lastname }}
+                                <small>({{ thisYear - report.birthdate }} ans)</small>
+                            </h6>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
