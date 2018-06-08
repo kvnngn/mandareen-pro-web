@@ -1,0 +1,514 @@
+/* Connexion */
+
+body {
+	background: #FEB141;
+	font-family: Georgia;
+}
+
+h4 {
+	margin-left: 5%;
+}
+
+.mdp {
+	text-align: center;
+}
+
+.retour {
+	 border-style: solid;
+    border-width: 1px;
+}
+
+img {
+	text-align: center;
+	width: 50%
+}
+
+.div_Blanc {
+position: absolute;
+width: 27%;
+height: 700px;
+left: 15%;
+top: 150px;
+background: #FFFFFF;
+}
+
+.div_Transparent {
+position: absolute;
+width: 40%;
+height: 700px;
+left: 50%;
+top: 150px;
+}
+
+.text_left {
+text-align: center;	
+}
+
+h2 {
+	text-align: center;
+}
+
+a {
+	color:black;
+}
+
+input {
+		margin-left: 5%;
+		width: 90%;
+		height: 50px;
+}
+
+p {
+	margin-left: 5%;
+}
+
+.bouton_connexion {
+	
+background: #FEB141;
+font-size: 24px;
+height: 50px;
+color: #0D0D0D;
+}
+
+.bouton_inscription {
+	
+background: white;
+font-size: 24px;
+width: 70%;
+height: 50px;
+color: black;
+}
+
+/* Bouton "Nous contacter" */
+
+position: absolute;
+width: 181px;
+height: 22px;
+left: 140px;
+top: 653px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 18px;
+text-align: center;
+
+color: #0D0D0D;
+
+
+/* Bouton "Nous contacter" */
+
+position: absolute;
+width: 64px;
+height: 42px;
+left: 31px;
+top: 231px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 24px;
+text-align: center;
+
+color: #000000;
+
+
+/* Bouton "Nous contacter" */
+
+position: absolute;
+width: 153px;
+height: 39px;
+left: 31px;
+top: 384px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 24px;
+text-align: center;
+
+color: #000000;
+
+
+/* input mdp */
+
+position: absolute;
+width: 378px;
+height: 67px;
+left: 36px;
+top: 423px;
+
+background: #FFFFFF;
+
+
+/* Line 2.2 */
+
+position: absolute;
+width: 361px;
+height: 0px;
+left: 7px;
+top: 6px;
+
+border: 1px solid #000000;
+
+
+/* Line 2.3 */
+
+position: absolute;
+width: 361px;
+height: 0px;
+left: 7px;
+top: 59px;
+
+border: 1px solid #000000;
+
+
+/* Line 2.4 */
+
+position: absolute;
+width: 55px;
+height: 0px;
+left: 368px;
+top: 5px;
+
+border: 1px solid #000000;
+transform: rotate(90deg);
+
+
+/* Line */
+
+position: absolute;
+width: 53px;
+height: 0px;
+left: 7px;
+top: 6px;
+
+border: 1px solid #000000;
+transform: rotate(90deg);
+
+
+/* input email */
+
+position: absolute;
+width: 378px;
+height: 67px;
+left: 36px;
+top: 273px;
+
+background: #FFFFFF;
+
+
+/* Line 2.2 */
+
+position: absolute;
+width: 361px;
+height: 0px;
+left: 7px;
+top: 6px;
+
+border: 1px solid #000000;
+
+
+/* Line 2.3 */
+
+position: absolute;
+width: 361px;
+height: 0px;
+left: 7px;
+top: 59px;
+
+border: 1px solid #000000;
+
+
+/* Line 2.4 */
+
+position: absolute;
+width: 55px;
+height: 0px;
+left: 368px;
+top: 5px;
+
+border: 1px solid #000000;
+transform: rotate(90deg);
+
+
+/* Line */
+
+position: absolute;
+width: 53px;
+height: 0px;
+left: 7px;
+top: 6px;
+
+border: 1px solid #000000;
+transform: rotate(90deg);
+
+
+/* Logo | Nom */
+
+position: absolute;
+width: 228px;
+height: 79px;
+left: 112px;
+top: 100px;
+
+background: url(logo_test.png);
+
+
+/* div bouton connection */
+
+position: absolute;
+width: 335px;
+height: 85px;
+left: 63px;
+top: 542px;
+
+background: #FFFFFF;
+
+
+/* bouton connexion */
+
+position: absolute;
+width: 306px;
+height: 69px;
+left: 13px;
+top: 11px;
+
+background: #FEB141;
+
+
+/* Connexion */
+
+position: absolute;
+width: 115px;
+height: 29px;
+left: 109px;
+top: 31px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 24px;
+text-align: center;
+
+color: #FFFFFF;
+
+
+/* div créer un compte */
+
+position: absolute;
+width: 335px;
+height: 85px;
+left: 910px;
+top: 803px;
+
+background: #FFFFFF;
+
+
+/* Rectangle 2 */
+
+position: absolute;
+width: 306px;
+height: 69px;
+left: 13px;
+top: 11px;
+
+background: #FEB141;
+
+
+/* Rectangle 2.1 */
+
+position: absolute;
+width: 306px;
+height: 69px;
+left: 13px;
+top: 11px;
+
+background: #FFFFFF;
+
+
+/* Créer un compte */
+
+position: absolute;
+width: 180px;
+height: 29px;
+left: 76px;
+top: 31px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 24px;
+text-align: center;
+
+color: #000000;
+
+
+/* Bouton "Nous contacter" */
+
+position: absolute;
+width: 299px;
+height: 31px;
+left: 571px;
+top: 58px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 26px;
+text-align: center;
+
+color: #0D0D0D;
+
+
+/* Bouton "Nous contacter" */
+
+position: absolute;
+width: 267px;
+height: 36px;
+left: 944px;
+top: 213px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+line-height: normal;
+font-size: 30px;
+text-align: center;
+
+color: #0D0D0D;
+
+
+/* div suivez */
+
+position: absolute;
+width: 505px;
+height: 113px;
+left: 798px;
+top: 310px;
+
+
+
+/* Suivez vos patients dans leur quotidien */
+
+position: absolute;
+width: 363px;
+height: 49px;
+left: 107px;
+top: 22px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 28px;
+text-align: center;
+
+color: #333333;
+
+
+/* Rectangle */
+
+position: absolute;
+width: 62px;
+height: 58px;
+left: 23px;
+top: 25px;
+
+background: url(.png);
+
+
+/* div gagner */
+
+position: absolute;
+width: 505px;
+height: 113px;
+left: 810px;
+top: 643px;
+
+
+
+/* Gagner du temps grace à un outil simple et pratique */
+
+position: absolute;
+width: 363px;
+height: 49px;
+left: 107px;
+top: 22px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 28px;
+text-align: center;
+
+color: #333333;
+
+
+/* Icon Report */
+
+position: absolute;
+width: 81px;
+height: 72px;
+left: 0px;
+top: 21px;
+
+background: url(icon_horloge.png);
+
+
+/* div centraliser */
+
+position: absolute;
+width: 494px;
+height: 70px;
+left: 821px;
+top: 498px;
+
+
+
+/* Centraliser vos informations */
+
+position: absolute;
+width: 363px;
+height: 49px;
+left: 107px;
+top: 22px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+line-height: normal;
+font-size: 28px;
+text-align: center;
+
+color: #333333;
+
+
+/* Icon Report */
+
+position: absolute;
+width: 58px;
+height: 48px;
+left: 0px;
+top: 12px;
+
+background: url(icon_report.png);
+
+
+/* div retour mandareen.fr */
+
+position: absolute;
+width: 335px;
+height: 79px;
+left: 553px;
+top: 37px;
+
+border: 1px solid #000000;
+box-sizing: border-box;
