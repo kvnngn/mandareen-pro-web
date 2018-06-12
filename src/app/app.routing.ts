@@ -1,30 +1,31 @@
 import {Routes} from '@angular/router';
-
-import {HomeComponent} from './home/home.component';
-import {PatientsComponent} from './patients/patients.component';
-import {ReportsComponent} from './reports/reports.component';
-import {SettingsComponent} from './settings/settings.component';
-import {LoginComponent} from './login/login.component';
+import {NotFoundComponent} from './shared/404/404.component';
+import {ErrorComponent} from './shared/error/error.component';
+import {AuthLayoutComponent} from './layouts/auth/auth-layout.component';
+import {AdminLayoutComponent} from './layouts/admin/admin-layout.component';
+import {AdminGuard} from './providers/admin-guard.service';
 
 export const AppRoutes: Routes = [
     {
-        path: 'home',
-        component: HomeComponent
+        path: '',
+        redirectTo: 'auth/login',
+        pathMatch: 'full'
     },
     {
-        path: 'login',
-        component: LoginComponent
+        path: 'auth',
+        component: AuthLayoutComponent,
+        loadChildren: './auth/auth.module#AuthModule'
     },
     {
-        path: 'patients',
-        component: PatientsComponent
+        path: 'admin',
+        canActivate: [AdminGuard],
+        component: AdminLayoutComponent,
+        loadChildren: './admin/admin.module#AdminModule'
     },
     {
-        path: 'reports',
-        component: ReportsComponent
+        path: 'error',
+        component: ErrorComponent
     },
-    {
-        path: 'settings',
-        component: SettingsComponent
-    },
+    {path: '404', component: NotFoundComponent},
+    {path: '**', redirectTo: '404'}
 ];

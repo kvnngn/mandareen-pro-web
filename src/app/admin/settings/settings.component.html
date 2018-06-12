@@ -1,0 +1,28 @@
+<div class="main-content">
+  <div class="ui segment center aligned" style="min-height: 500px;">
+    <h2 class="ui header">Gestion de vos paramètres</h2>
+    <div class="ui grid centered" style="padding-top: 50px">
+      <div class="ui three wide column">
+        <a routerLink="office">
+          <i class="fa fa-info"></i>
+          Coordonnées
+        </a>
+      </div>
+      <div class="ui three wide column">
+        <a routerLink="frames">
+          <i class="fa fa-clock-o"></i>
+          Horaires
+        </a>
+      </div>
+      <div class="ui three wide column">
+        <a routerLink="payment">
+          <i class="fa fa-money"></i>
+          Moyens de paiement
+        </a>
+      </div>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
