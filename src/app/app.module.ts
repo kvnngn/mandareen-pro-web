@@ -1,32 +1,35 @@
+import {ReactiveFormsModule} from '@angular/forms';
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AppRoutes} from './app.routing';
-import {SidebarModule} from './sidebar/sidebar.module';
+import {AuthenticationService} from './providers';
+import {NotFoundComponent} from './shared/404/404.component';
+import {ErrorComponent} from './shared/error/error.component';
+import {SidebarModule} from './admin/sidebar/sidebar.module';
 import {FooterModule} from './shared/footer/footer.module';
 import {NavbarModule} from './shared/navbar/navbar.module';
 
 
-import {HomeComponent} from './home/home.component';
-import {ApiService} from './providers/api.service';
-import {ProService} from './providers/pro.service';
-import {PatientsComponent} from './patients/patients.component';
-import {ReportsComponent} from './reports/reports.component';
-import {SettingsComponent} from './settings/settings.component';
-import {LoginComponent} from './login/login.component';
+import {HomeComponent} from './admin/home/home.component';
+import {ApiService} from './providers';
+import {ProService} from './providers';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
-
+import {AuthnavbarModule} from './shared/navbar/authnavbar.module';
+import {AuthLayoutComponent} from './layouts/auth/auth-layout.component';
+import {AdminLayoutComponent} from './layouts/admin/admin-layout.component';
+import {AdminGuard} from './providers/admin-guard.service';
+import {AdminNavbarModule} from "./admin/admin-navbar/navbar.module";
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent,
-        PatientsComponent,
-        ReportsComponent,
-        SettingsComponent,
-        LoginComponent,
+        ErrorComponent,
+        NotFoundComponent,
+        AuthLayoutComponent,
+        AdminLayoutComponent,
     ],
     imports: [
         BrowserModule,
@@ -35,8 +38,17 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
         SidebarModule,
         NavbarModule,
         FooterModule,
+        ReactiveFormsModule,
+        AuthnavbarModule,
+        AdminNavbarModule
     ],
-    providers: [ApiService, ProService, HttpClient],
+    providers: [
+        ApiService,
+        ProService,
+        HttpClient,
+        AuthenticationService,
+        AdminGuard,
+    ],
     bootstrap: [AppComponent]
 })
 export class AppModule {
