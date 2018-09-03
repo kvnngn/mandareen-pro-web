@@ -9,7 +9,7 @@ export class ProService {
     }
 
     getPatientsByPro(id): Observable<any> {
-        return this.api.get('/pro/patients/proId/' + id);
+        return this.api.get('/pro/followups/proId/' + id);
     }
 
     getReports(): Observable<any> {
@@ -17,14 +17,14 @@ export class ProService {
     }
 
     getPatientById(id): Observable<any> {
-        return this.api.get('/patients/patients/' + id);
+        return this.api.get('/followups/followups/' + id);
     }
 
     createPatient(patient) {
         return this.api.post('/pro/patient/create/', patient);
     }
 
-    getFollow(): Observable<any> {
-        return this.api.get('/pro/reports/');
+    getFollowUps(id): Observable<any> {
+        return this.api.get('/pro/followups/proId/' + id);
     }
 }

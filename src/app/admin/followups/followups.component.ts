@@ -1,5 +1,5 @@
 import {Component, OnInit, NgZone} from '@angular/core';
-import {ProService} from '../../providers';
+import {AuthenticationService, ProService} from '../../providers';
 
 @Component({
     selector: 'app-reports',
@@ -8,18 +8,28 @@ import {ProService} from '../../providers';
 })
 export class FollowupsComponent implements OnInit {
 
-    reports: any = [];
-    patients: any = [];
+    followups: any = [];
+    user;
 
     constructor(private proService: ProService,
+                private authentificationService: AuthenticationService,
                 private ngZone: NgZone) {
+        this.user = this.authentificationService.getUser();
     }
 
     ngOnInit() {
-        // this.getReports();
+         this.getFollowUps();
     }
 
-    getReports() {
-
+    getFollowUps() {
+        this.proService.getFollowUps(this.user.pro.id).subscribe(
+            followups => {
+                this.ngZone.run(() => {
+                    console.log(followups); this.followups = followups;});
+            },
+            error => {
+                console.log(error);
+            }
+        );
     }
 }

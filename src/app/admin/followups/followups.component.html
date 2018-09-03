@@ -2,11 +2,11 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-md-12">
-                <div *ngIf="reports.length === 0" class="alert alert-info">
+                <div *ngIf="followups.length === 0" class="alert alert-info">
                     <span>Aucun suivi pour le moment</span>
                 </div>
 
-                <div *ngIf="reports.length > 0" class="card hidden-xs">
+                <div *ngIf="followups.length > 0" class="card hidden-xs">
                     <div class="header text-center">
                         <h4 class="title">Liste de mes suivis</h4>
                     </div>
@@ -16,15 +16,21 @@
                             <tr>
                                 <th>Nom</th>
                                 <th>Prénom</th>
-                                <th>Contenu</th>
+                                <th>Statut</th>
                             </tr>
                             </thead>
                             <tbody>
-                            <tr *ngFor="let patient of patients">
-                                <td> {{patient.firstname}}</td>
-                                <td> {{patient.lastname}}</td>
-                                <td *ngFor="let report of reports">
-                                    {{ report.content }}
+                            <tr *ngFor="let followup of followups">
+                                <td> {{followup.Patient.firstname}}</td>
+                                <td> {{followup.Patient.lastname}}</td>
+                                <td *ngIf="followup.status === 'Accepted'">
+                                    Accepté
+                                </td>
+                                <td *ngIf="followup.status === 'Refused'">
+                                    Refusé
+                                </td>
+                                <td *ngIf="followup.status === 'Notification sent'">
+                                    En attente
                                 </td>
                             </tr>
                             </tbody>
@@ -33,7 +39,7 @@
                     </div>
                 </div>
 
-                <div *ngIf="reports.length > 0" class="hidden-sm hidden-md hidden-lg">
+                <div *ngIf="followups.length > 0" class="hidden-sm hidden-md hidden-lg">
                     <ul class="list-group" *ngFor="let report of reports">
                         <li class="list-group-item">
                             <h6>{{ report.firstname }} {{ report.lastname }}
