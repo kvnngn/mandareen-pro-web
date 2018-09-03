@@ -23,4 +23,8 @@ export class ProService {
     createPatient(patient) {
         return this.api.post('/pro/patient/create/', patient);
     }
+
+    getFollow(): Observable<any> {
+        return this.api.get('/pro/reports/');
+    }
 }

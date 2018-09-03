@@ -2,6 +2,7 @@ import {NgModule, CUSTOM_ELEMENTS_SCHEMA} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {FollowupsComponent} from './followups/followups.component';
 import {HomeComponent} from './home/home.component';
 import {PatientsComponent} from './patients/patients.component';
 import {ReportsComponent} from './reports/reports.component';
@@ -21,7 +22,8 @@ import {PatientsNewComponent} from './patients/patients-new.component';
         PatientsComponent,
         PatientsNewComponent,
         ReportsComponent,
-        SettingsComponent
+        SettingsComponent,
+        FollowupsComponent
     ],
     providers: [],
     exports: [],
