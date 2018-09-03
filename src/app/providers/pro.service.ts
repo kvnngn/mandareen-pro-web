@@ -8,20 +8,16 @@ export class ProService {
     constructor(private api: ApiService) {
     }
 
-    getPatients(): Observable<any> {
-        return this.api.get('/patients/account/patients/');
-    }
-
     getPatientsByPro(id): Observable<any> {
-        return this.api.get('/pro/account/patients/proId/' + id);
+        return this.api.get('/pro/patients/proId/' + id);
     }
 
     getReports(): Observable<any> {
-        return this.api.get('/pro/account/reports/');
+        return this.api.get('/pro/reports/');
     }
 
     getPatientById(id): Observable<any> {
-        return this.api.get('/patients/account/patients/' + id);
+        return this.api.get('/patients/patients/' + id);
     }
 
     createPatient(patient) {

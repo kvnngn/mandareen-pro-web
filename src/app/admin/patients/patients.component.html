@@ -25,9 +25,9 @@
                             <tbody>
                             <tr *ngFor="let patient of patients">
 
-                                <td>{{ patient.firstname }}</td>
-                                <td>{{ patient.lastname }}</td>
-                                <td>{{ patient.birthdate }}</td>
+                                <td>{{ patient.Patient.firstname }}</td>
+                                <td>{{ patient.Patient.lastname }}</td>
+                                <td>{{ patient.Patient.birthdate }}</td>
 
                                 <td class="td-actions text-right" hidden>
                                     <a rel="tooltip" title="View Profile" class="btn btn-info btn-simple btn-xs">
@@ -50,8 +50,8 @@
                 <div *ngIf="patients.length > 0" class="hidden-sm hidden-md hidden-lg">
                     <ul class="list-group" *ngFor="let patient of patients">
                         <li class="list-group-item">
-                            <h6>{{ patient.firstname }} {{ patient.lastname }}
-                                <small>({{ thisYear - patient.birthdate }} ans)</small>
+                            <h6>{{ patient.Patient.firstname }} {{ patient.Patient.lastname }}
+                                <small>({{ thisYear - patient.Patient.birthdate }} ans)</small>
                             </h6>
                         </li>
                     </ul>

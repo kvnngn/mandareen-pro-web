@@ -15,7 +15,6 @@ export class PatientsComponent implements OnInit {
                 private authentificationService: AuthenticationService,
                 private ngZone: NgZone) {
         this.user = this.authentificationService.getUser();
-        console.log(this.user.pro.id);
     }
 
     ngOnInit() {
@@ -25,9 +24,7 @@ export class PatientsComponent implements OnInit {
     getPatientsByPro() {
         this.proService.getPatientsByPro(this.user.pro.id).subscribe(
             patients => {
-                this.ngZone.run(() => {
-                    this.patients = patients;
-                });
+                this.ngZone.run(() => {this.patients = patients;});
             },
             error => {
                 console.log(error);
