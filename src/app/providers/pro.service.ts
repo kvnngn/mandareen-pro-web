@@ -9,7 +9,7 @@ export class ProService {
     }
 
     getPatientsByPro(id): Observable<any> {
-        return this.api.get('/pro/followups/proId/' + id);
+        return this.api.get('/pro/patients/proId/' + id);
     }
 
     getReports(): Observable<any> {
