@@ -1,5 +1,5 @@
 <div class="ui segment">
-    <h1 class="title1">Fiche patient</h1>
+    <h1 class="title1">Fiche de {{lastname + ' ' + firstname}}</h1>
 
     <div class="ui stackable grid two column">
         <div class="column ui form">
@@ -11,8 +11,8 @@
                 <input type="text" [(ngModel)]="patient.email" placeholder="E-mail">
             </div>
             <div class="field">
-                <label>Mot de passe </label>
-                <input type="text" [(ngModel)]="patient.password" placeholder="mot de passe">
+                <label>Envoyer un nouveau mot de passe par mail </label>
+                <button class="ui button" (click)="resetPassword()">Réinitialiser le mot de passe</button>
             </div>
         </div>
         <div class="column ui form">
@@ -22,10 +22,10 @@
                 </h4>
                 <div class="field">
                     <label class="block-label">Civilité : </label>
-                        <select [(ngModel)]="patient.civility" placeholder="Civilité">
-                            <option value="M">M</option>
-                            <option value="F">F</option>
-                        </select>
+                    <select [(ngModel)]="patient.civ" placeholder="Civilité">
+                        <option value="M">M</option>
+                        <option value="Mme">F</option>
+                    </select>
                 </div>
                 <div class="field">
                     <label class="block-label">Nom : </label>
@@ -45,8 +45,8 @@
     </div>
 
 
-    <button class="ui button green inverted" (click)="createPatient()">Sauvegarder</button>
+    <button class="ui button green inverted" (click)="update()">Mettre à jour</button>
     <a routerLinkActive="active" [routerLink]="['/admin/patients']">
-        <button class="ui button red inverted">Annuler</button>
+        <button class="ui button red inverted">Retourner à la liste des patients</button>
     </a>
 </div>

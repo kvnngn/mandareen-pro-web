@@ -1,4 +1,5 @@
 import {Component, OnInit, NgZone} from '@angular/core';
+import {Router} from '@angular/router';
 import {AuthenticationService, ProService} from '../../providers';
 
 @Component({
@@ -12,6 +13,7 @@ export class PatientsComponent implements OnInit {
     user;
 
     constructor(private proService: ProService,
+                private router: Router,
                 private authentificationService: AuthenticationService,
                 private ngZone: NgZone) {
         this.user = this.authentificationService.getUser();
@@ -30,5 +32,9 @@ export class PatientsComponent implements OnInit {
                 console.log(error);
             }
         );
+    }
+
+    goToPatientEdit(patient){
+        this.router.navigate(['/admin/patients/edit/' + patient.id], patient);
     }
 }

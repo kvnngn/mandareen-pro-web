@@ -4,11 +4,12 @@ import {RouterModule} from '@angular/router';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {FollowupsComponent} from './followups/followups.component';
 import {HomeComponent} from './home/home.component';
+import {PatientsEditComponent} from './patients/patients-edit/patients-edit.component';
 import {PatientsComponent} from './patients/patients.component';
 import {ReportsComponent} from './reports/reports.component';
 import {SettingsComponent} from './settings/settings.component';
 import {AdminRoutes} from './admin.routing';
-import {PatientsNewComponent} from './patients/patients-new.component';
+import {PatientsNewComponent} from './patients/patients-new/patients-new.component';
 
 @NgModule({
     imports: [
@@ -23,7 +24,8 @@ import {PatientsNewComponent} from './patients/patients-new.component';
         PatientsNewComponent,
         ReportsComponent,
         SettingsComponent,
-        FollowupsComponent
+        FollowupsComponent,
+        PatientsEditComponent
     ],
     providers: [],
     exports: [],
