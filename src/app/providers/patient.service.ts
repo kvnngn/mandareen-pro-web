@@ -11,6 +11,10 @@ export class PatientService {
         return this.api.get('/pro/patient/id/' + id);
     }
 
+    getPatients(): Observable<any> {
+        return this.api.get('/pro/patients');
+    }
+
     update(params): Observable<any> {
         return this.api.put('/pro/patient/update', params);
     }

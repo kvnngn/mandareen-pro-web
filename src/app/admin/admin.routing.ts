@@ -1,4 +1,5 @@
 import {Routes} from '@angular/router';
+import {FollowupsNewComponent} from './followups/followups-new/followups-new.component';
 import {FollowupsComponent} from './followups/followups.component';
 import {HomeComponent} from './home/home.component';
 import {PatientsEditComponent} from './patients/patients-edit/patients-edit.component';
@@ -33,6 +34,11 @@ export const AdminRoutes: Routes = [
             path: 'followups',
             component:
             FollowupsComponent
+        }
+        , {
+            path: 'followups/new',
+            component:
+            FollowupsNewComponent
         }
         ,
         {
