@@ -6,6 +6,13 @@
             </div>
             Mandareen
         </a>
+        <div class="user-profile text-center header-sidebar">
+            <a aria-expanded="false">
+                <div class="hide-menu">
+                    {{user.pro.firstname + " " + user.pro.lastname}}
+                </div>
+            </a>
+        </div>
     </div>
     <ul class="nav">
         <li class="divider" *ngIf="isNotMobileMenu()"></li>

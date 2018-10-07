@@ -8,6 +8,7 @@ import {AppRoutes} from './app.routing';
 import {AuthenticationService, CaresService, FollowupsService} from './providers';
 import {AlertService} from './providers/alert.service';
 import {PatientService} from './providers/patient.service';
+import {ReportsService} from './providers/reports.service';
 import {NotFoundComponent} from './shared/404/404.component';
 import {ErrorComponent} from './shared/error/error.component';
 import {SidebarModule} from './admin/sidebar/sidebar.module';
@@ -53,7 +54,8 @@ import {AdminNavbarModule} from "./admin/admin-navbar/navbar.module";
         PatientService,
         AlertService,
         CaresService,
-        FollowupsService
+        FollowupsService,
+        ReportsService
     ],
     bootstrap: [AppComponent]
 })

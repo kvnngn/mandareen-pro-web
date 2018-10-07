@@ -5,6 +5,7 @@ import {HomeComponent} from './home/home.component';
 import {PatientsEditComponent} from './patients/patients-edit/patients-edit.component';
 import {PatientsComponent} from './patients/patients.component';
 import {PatientsNewComponent} from './patients/patients-new/patients-new.component';
+import {ReportsNewComponent} from './reports/reports-new/reports-new.component';
 import {ReportsComponent} from './reports/reports.component';
 import {SettingsComponent} from './settings/settings.component';
 
@@ -29,6 +30,11 @@ export const AdminRoutes: Routes = [
             path: 'reports',
             component:
             ReportsComponent
+        }
+        , {
+            path: 'reports/new',
+            component:
+            ReportsNewComponent
         }
         , {
             path: 'followups',

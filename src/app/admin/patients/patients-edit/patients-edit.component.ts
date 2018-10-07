@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {ActivatedRoute} from '@angular/router';
 import {AlertService} from '../../../providers/alert.service';
 import {PatientService} from '../../../providers/patient.service';
+import {ReportsService} from '../../../providers/reports.service';
 
 
 @Component({
@@ -22,9 +23,11 @@ export class PatientsEditComponent implements OnInit {
     };
     firstname = '';
     lastname = '';
+    reports : any = [];
 
     constructor(private patientService: PatientService,
                 private ngZone: NgZone,
+                private reportsService: ReportsService,
                 private authentificationService: AuthenticationService,
                 private _Activatedroute: ActivatedRoute,
                 private alertService: AlertService,
@@ -32,6 +35,7 @@ export class PatientsEditComponent implements OnInit {
         this.user = this.authentificationService.getUser();
         this.patientId = this._Activatedroute.snapshot.params.id;
         this.getPatientById();
+        this.getReports();
     }
 
     ngOnInit() {}
@@ -62,6 +66,18 @@ export class PatientsEditComponent implements OnInit {
         this.patientService.resetPassword(this.patient).subscribe(
             patient => {this.alertService.alert('success', 'Un nouveau mot de passe a bien été envoyé par mail');},
             error => {this.alertService.alert('warning', 'Une erreur est survenue lors de la mise à jour du profil');}
+        );
+    }
+
+    getReports() {
+        this.reportsService.getReportsByPatientId(this.patientId).subscribe(
+            reports => {
+                this.ngZone.run(() => {
+                    this.reports = reports;
+                    console.log(reports)
+                });
+            },
+            error => {console.log(error);}
         );
     }
 }

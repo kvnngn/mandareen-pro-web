@@ -1,6 +1,7 @@
 import {Component, OnInit, NgZone} from '@angular/core';
-import {ProService} from '../../providers';
+import {AuthenticationService, ProService} from '../../providers';
 import {PatientService} from '../../providers/patient.service';
+import {ReportsService} from '../../providers/reports.service';
 
 @Component({
     selector: 'app-reports',
@@ -10,11 +11,14 @@ import {PatientService} from '../../providers/patient.service';
 export class ReportsComponent implements OnInit {
 
     reports: any = [];
-    patients: any = [];
+    user;
 
     constructor(private proService: ProService,
+                private reportsService: ReportsService,
+                private authentificationService: AuthenticationService,
                 private patientService: PatientService,
                 private ngZone: NgZone) {
+        this.user = this.authentificationService.getUser();
     }
 
     ngOnInit() {
@@ -22,33 +26,16 @@ export class ReportsComponent implements OnInit {
     }
 
     getReports() {
-        this.proService.getReports().subscribe(
+        this.reportsService.getReportsByProId(this.user.pro.id).subscribe(
             reports => {
                 this.ngZone.run(() => {
                     this.reports = reports;
-                    this.getPatients();
+                    console.log(reports)
                 });
             },
             error => {
                 console.log(error);
             }
         );
-    }
-
-    getPatients() {
-        for (let i = 0; i < this.reports.length; i++) {
-            this.patientService.getPatientById(this.reports[i].patient_id).subscribe(
-                patient => {
-                    this.ngZone.run(() => {
-                        this.patients[i] = patient;
-                    });
-                },
-                error => {
-                    console.log(error);
-                }
-            );
-        }
-        console.log(this.reports);
-        console.log(this.patients);
     }
 }

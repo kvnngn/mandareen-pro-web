@@ -12,10 +12,6 @@ export class ProService {
         return this.api.get('/pro/patients/proId/' + id);
     }
 
-    getReports(): Observable<any> {
-        return this.api.get('/pro/reports/');
-    }
-
     createPatient(patient) {
         return this.api.post('/pro/patient/create/', patient);
     }
