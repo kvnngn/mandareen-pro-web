@@ -1,42 +1,4 @@
 <nav #pagesnavbar class="navbar navbar-primary navbar-transparent navbar-absolute">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navigation-example-2"
-                    (click)="sidebarToggle()">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="https://libheros.fr">Retour au site libheros.fr</a>
-        </div>
-        <div class="collapse navbar-collapse">
-            <ul class="nav navbar-nav navbar-right">
-                <li>
-                    <a routerLinkActive="active" [routerLink]="['auth/login']" *ngIf="location.path() !='/login'">
-                        <i class="fa fa-sign-in" aria-hidden="true" style="padding: 5px;"></i>
-                        <p>Se connecter</p>
-                    </a>
-                </li>
-                <li>
-                    <a routerLinkActive="active" [routerLink]="['auth/register']" *ngIf="location.path() =='/login'">
-                        <i class="fa fa-user-plus" aria-hidden="true" style="padding: 5px;"></i>
-                        <p>Pas encore inscrit(e) ?</p>
-                    </a>
-                </li>               
-                <li>
-                    <a href="https://www.pros.libheros.fr">
-                        <i class="fa fa-info" aria-hidden="true" style="padding: 5px;"></i>
-                        <p>Infos sur libheros PRO</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="tel:0981614550">
-                        <i class="fa fa-phone" aria-hidden="true" style="padding: 5px;"></i>
-                        <p>Aide : 09 81 61 45 50</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
     </div>
 </nav>

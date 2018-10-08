@@ -48,15 +48,4 @@ export class AuthnavbarComponent implements OnInit {
         body.classList.remove('nav-open');
     }
 
-    sidebarToggle() {
-        if (this.sidebarVisible === false) {
-            this.sidebarOpen();
-        } else {
-            this.sidebarClose();
-        }
-    }
-
-    getPath() {
-        return this.location.prepareExternalUrl(this.location.path());
-    }
 }

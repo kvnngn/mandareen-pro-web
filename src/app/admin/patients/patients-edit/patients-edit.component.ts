@@ -19,7 +19,9 @@ export class PatientsEditComponent implements OnInit {
     patient = {
         email: '',
         firstname: '',
-        lastname: ''
+        lastname: '',
+        civ: '',
+        birthdate:''
     };
     firstname = '';
     lastname = '';
