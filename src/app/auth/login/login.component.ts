@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import {AuthenticationService} from '../../providers';
+import {AlertService} from '../../providers/alert.service';
 
 
 @Component({
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
     pro: any = {'email': '', 'password': ''};
 
     constructor(private authenticationService: AuthenticationService,
+                private alertService: AlertService,
                 private router: Router) {
     }
 
@@ -30,7 +32,14 @@ export class LoginComponent implements OnInit {
                     }
                     this.router.navigate([url]);
                 },
-                error => {console.log(error);}
+                error => {
+                    if (error.error.error === 'invalid password') {
+                        this.alertService.alert('warning', 'Le mot de passe est incorrect !');
+                    }
+                    else if (error.error.error === 'pro not exist in DB') {
+                        this.alertService.alert('warning', 'Aucun utilisateur n\'existe avec cette adresse mail');
+                    }
+                }
             );
         }
     }
