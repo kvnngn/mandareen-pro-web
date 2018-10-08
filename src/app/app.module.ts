@@ -5,7 +5,7 @@ import {RouterModule} from '@angular/router';
 
 import {AppComponent} from './app.component';
 import {AppRoutes} from './app.routing';
-import {AuthenticationService, CaresService, FollowupsService} from './providers';
+import {AccountService, AuthenticationService, CaresService, FollowupsService} from './providers';
 import {AlertService} from './providers/alert.service';
 import {PatientService} from './providers/patient.service';
 import {ReportsService} from './providers/reports.service';
@@ -55,7 +55,8 @@ import {AdminNavbarModule} from "./admin/admin-navbar/navbar.module";
         AlertService,
         CaresService,
         FollowupsService,
-        ReportsService
+        ReportsService,
+        AccountService
     ],
     bootstrap: [AppComponent]
 })

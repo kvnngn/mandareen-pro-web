@@ -42,7 +42,6 @@ export class SidebarComponent implements OnInit {
                 private alertService: AlertService,
                 private router: Router) {
         this.user = this.authentificationService.getUser();
-        console.log(this.user);
     }
 
     ngOnInit() {

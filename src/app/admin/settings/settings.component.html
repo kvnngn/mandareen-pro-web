@@ -1,7 +1,5 @@
 <div class="ui segment">
-    <h1 class="title1">Mes données personelles
-        <button class="ui button green inverted right floated" (click)="update()">Mettre à jour</button>
-    </h1>
+    <h1 class="title1">Mes données personelles</h1>
 
     <div class="ui stackable grid two column">
         <div class="column ui form">
@@ -15,21 +13,23 @@
             </div>
             <div class="field">
                 <label>Mot de passe actuel : </label>
-                <input type="password" [(ngModel)]="user.pro.password" placeholder="Indiquez votre nouveau mot de passe actuel">
+                <input type="text" [(ngModel)]="passwordForm.currentPassword" placeholder="Indiquez votre nouveau mot de passe actuel">
             </div>
             <div class="field">
                 <label>Nouveau mot de passe : </label>
-                <input type="password" [(ngModel)]="user.pro.password" placeholder="Indiquez votre nouveau mot de passe">
+                <input type="text" [(ngModel)]="passwordForm.newPassword" placeholder="Indiquez votre nouveau mot de passe">
             </div>
             <div class="field">
                 <label>Nouveau mot de passe : </label>
-                <input type="password" [(ngModel)]="user.pro.password" placeholder="Retapez votre nouveau mot de passe">
+                <input type="text" [(ngModel)]="passwordForm.confirmedNewPassword" placeholder="Retapez votre nouveau mot de passe">
             </div>
+            <button class="ui button green inverted right floated" (click)="updatePassword()">Modifier mon mot de passe</button>
         </div>
         <div class="column ui form">
             <div class="block min-height">
                 <h4 class="ui header">
                     Informations personnelles
+                    <button class="ui button green inverted right floated" (click)="update()">Mettre à jour</button>
                 </h4>
                 <div class="field">
                     <label class="block-label">Civilité : </label>
@@ -57,6 +57,10 @@
                 <div class="field">
                     <label class="block-label">Numéro de téléphone : </label>
                     <input type="text" [(ngModel)]="user.pro.phone" placeholder="0666915897">
+                </div>
+                <div class="field">
+                    <label class="block-label">Adeli : </label>
+                    <input type="text" [(ngModel)]="user.pro.adeli" placeholder="Numéro ADELI">
                 </div>
             </div>
         </div>

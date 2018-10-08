@@ -1,5 +1,4 @@
 <authnavbar-cmp></authnavbar-cmp>
-
 <div class="wrapper wrapper-full-page">
     <div class="full-page register-page" data-color="azure">
         <div class="content">
@@ -19,12 +18,13 @@
                     </div>
 
                     <div class="column">
-                        <form [formGroup]="RegisterForm" (ngSubmit)="register(RegisterForm.value)" novalidate class="ui form">
+                        <form [formGroup]="RegisterForm" (ngSubmit)="register(RegisterForm.value)" novalidate
+                              class="ui form">
                             <div class="ui segments">
                                 <div class="ui segment">
                                     <h3 class="ui header">
                                         <img src="../../../assets/img/Mandareen-logo.png" width="20%">
-                                        <div class="content">Je m'inscrit sur Mandareen Pro</div>
+                                        <div class="content">Je m'inscris sur Mandareen Pro</div>
                                     </h3>
                                 </div>
                                 <div class="ui segment">
@@ -143,7 +143,8 @@
                                             angularticsCategory="Evenement"
                                             angularticsAction="Inscription">
                                         Je m'inscris !
-                                    </button><br>
+                                    </button>
+                                    <br>
                                     <small>
                                         En continuant, j'accepte que les conditions générales
                                         de Mandareen SAS et d'être contacté(e) par les moyens ci-dessus
