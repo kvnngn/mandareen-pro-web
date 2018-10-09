@@ -32,7 +32,8 @@ export class PatientsNewComponent implements OnInit {
     createPatient() {
         this.proService.createPatient(this.patient).subscribe(
             patient => {
-                this.router.navigate(['/admin/followups']);
+                console.log(patient)
+                this.router.navigate(['/admin/patients']);
             },
             error => {
             }
