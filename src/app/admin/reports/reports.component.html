@@ -25,9 +25,9 @@
                             </thead>
                             <tbody>
                             <tr *ngFor="let report of reports">
-                                <td *ngIf="reports.Patient.firstname"> {{report.Patient.firstname}}</td>
-                                <td *ngIf="reports.Patient.lastname"> {{report.Patient.lastname}}</td>
-                                <td *ngIf="reports.content">{{ report.content }}</td>
+                                <td *ngIf="report.Patient"> {{report.Patient.firstname}}</td>
+                                <td *ngIf="report.Patient"> {{report.Patient.lastname}}</td>
+                                <td *ngIf="report.content">{{ report.content }}</td>
                             </tr>
                             </tbody>
 
