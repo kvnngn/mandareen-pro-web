@@ -24,8 +24,8 @@
                             </thead>
                             <tbody>
                             <tr *ngFor="let followup of followups">
-                                <td> {{followup.Patient.firstname}}</td>
-                                <td> {{followup.Patient.lastname}}</td>
+                                <td> {{followup.patient.firstname}}</td>
+                                <td> {{followup.patient.lastname}}</td>
                                 <td *ngIf="followup.status === 'Accepted'">
                                     Accepté
                                 </td>
