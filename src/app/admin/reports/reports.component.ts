@@ -10,7 +10,7 @@ import {ReportsService} from '../../providers/reports.service';
 })
 export class ReportsComponent implements OnInit {
 
-    reports: any = [];
+    reports: any = {Patient: {firstname: '', lastname:''}, content: ''};
     user;
 
     constructor(private proService: ProService,
@@ -30,7 +30,7 @@ export class ReportsComponent implements OnInit {
             reports => {
                 this.ngZone.run(() => {
                     this.reports = reports;
-                    console.log(reports)
+                    console.log(reports);
                 });
             },
             error => {
