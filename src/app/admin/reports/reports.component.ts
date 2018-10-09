@@ -10,7 +10,7 @@ import {ReportsService} from '../../providers/reports.service';
 })
 export class ReportsComponent implements OnInit {
 
-    reports: any = {Patient: {firstname: '', lastname:''}, content: ''};
+    reports: any = {patient: {firstname: '', lastname:''}, content: ''};
     user;
 
     constructor(private proService: ProService,
