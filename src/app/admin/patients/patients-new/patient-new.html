@@ -40,6 +40,23 @@
                     <input type="text" [(ngModel)]="patient.birthdate" placeholder="Année">
                 </div>
             </div>
+            <div class="block min-height">
+                <h4 class="ui header">
+                    Objectifs
+                </h4>
+                <div class="field">
+                    <label class="block-label">Nombre de Calories (par semaine) </label>
+                    <input type="number" [(ngModel)]="patient.nb_cal" placeholder="0">
+                </div>
+                <div class="field">
+                    <label class="block-label">Nombre d'heures de Sommeil (par semaine) </label>
+                    <input type="number" [(ngModel)]="patient.nb_sleep" placeholder="0">
+                </div>
+                <div class="field">
+                    <label class="block-label">Nombre d'heures d'activité physique (par semaine) </label>
+                    <input type="number" [(ngModel)]="patient.nb_sport" placeholder="0">
+                </div>
+            </div>
         </div>
 
     </div>
