@@ -37,7 +37,7 @@ import {AdminNavbarModule} from "./admin/admin-navbar/navbar.module";
     imports: [
         BrowserModule,
         HttpClientModule,
-        RouterModule.forRoot(AppRoutes),
+        RouterModule.forRoot(AppRoutes, {useHash: true}),
         SidebarModule,
         NavbarModule,
         FooterModule,
