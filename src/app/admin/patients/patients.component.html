@@ -6,14 +6,14 @@
                     <span>Aucun patient pour le moment</span>
                 </div>
 
-                <div *ngIf="patients.length > 0" class="card hidden-xs">
+                <div class="card hidden-xs">
                     <div class="header text-center">
                         <h4>Liste de mes patients</h4>
                     </div>
                     <button class="ui button green inverted right floated" routerLinkActive="active" [routerLink]="['/admin/patients/new']">
                         <i class="fa fa-user-plus"></i>Ajouter un patient
                     </button>
-                    <div class="content table-responsive table-full-width">
+                    <div *ngIf="patients.length > 0" class="content table-responsive table-full-width">
                         <table class="table">
                             <thead>
                             <tr>
