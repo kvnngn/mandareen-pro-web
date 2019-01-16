@@ -16,18 +16,24 @@
                     <div class="content table-responsive table-full-width">
                         <table class="table">
                             <thead>
-                           <tr>
+                            <tr>
                                 <th>Nom</th>
                                 <th>Prénom</th>
                                 <th>Date de naissance</th>
+                                <th>Nombre de Calories</th>
+                                <th>Nombre d'heures de sommeil</th>
+                                <th>Nombre d'heures d'activité physique</th>
                             </tr>
                             </thead>
                             <tbody>
                             <tr *ngFor="let patient of patients" (click)="goToPatientEdit(patient)">
 
-                                <td>{{ patient.patient.firstname }}</td>
-                                <td>{{ patient.patient.lastname }}</td>
-                                <td>{{ patient.patient.birthdate }}</td>
+                                <td>{{ patient.Patient.firstname }}</td>
+                                <td>{{ patient.Patient.lastname }}</td>
+                                <td>{{ patient.Patient.birthdate }}</td>
+                                <td>{{ patient.Patient.nb_cal }}</td>
+                                <td>{{ patient.Patient.nb_sleep }}</td>
+                                <td>{{ patient.Patient.nb_sport }}</td>
                             </tr>
                             </tbody>
 
@@ -38,8 +44,9 @@
                 <div *ngIf="patients.length > 0" class="hidden-sm hidden-md hidden-lg">
                     <ul class="list-group" *ngFor="let patient of patients">
                         <li class="list-group-item">
-                            <h6>{{ patient.patient.firstname }} {{ patient.patient.lastname }}
-                                <small>({{ thisYear - patient.patient.birthdate }} ans)</small>
+                            <h6>{{ patient.Patient.firstname }} {{ patient.Patient.lastname }}
+                                <small>({{ thisYear - patient.Patient.birthdate }} ans)</small>
+                                {{ patient.Patient.nb_cal }} {{ patient.Patient.nb_sleep }} {{ patient.Patient.nb_sport }}
                             </h6>
                         </li>
                     </ul>

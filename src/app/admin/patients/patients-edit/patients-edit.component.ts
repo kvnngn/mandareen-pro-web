@@ -17,11 +17,14 @@ export class PatientsEditComponent implements OnInit {
     patientId: any;
     user;
     patient = {
+        civ : '',
         email: '',
         firstname: '',
-        lastname: '',
-        civ: '',
-        birthdate:''
+        birthdate: '',
+        nb_cal: '',
+        nb_sleep: '',
+        nb_sport: '',
+        lastname: ''
     };
     firstname = '';
     lastname = '';

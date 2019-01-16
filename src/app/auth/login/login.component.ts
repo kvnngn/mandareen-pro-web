@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
                     this.router.navigate([url]);
                 },
                 error => {
+                    console.log(error)
                     if (error.error.error === 'invalid password') {
                         this.alertService.alert('warning', 'Le mot de passe est incorrect !');
                     }

@@ -14,7 +14,10 @@ export class PatientsNewComponent implements OnInit {
         firstname: '',
         lastname: '',
         birthdate: '',
-        civility: 'M'
+        civility: 'M',
+        nb_cal: '',
+        nb_sleep: '',
+        nb_sport: ''
     };
     user;
 
